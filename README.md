@@ -340,4 +340,3 @@ Read these documents before extending the project:
 ## License and disclaimer
 
 MIT License. This repository is a technical demonstration. It is not accounting, tax, legal, financial, or security advice.
-
