@@ -1,4 +1,5 @@
 import pytest
+
 from foie.forecasting import thirteen_week_cash
 from foie.pipeline import build_demo
 

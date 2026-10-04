@@ -1,4 +1,5 @@
 import streamlit as st
+
 from .pipeline import build_demo
 
 st.set_page_config(page_title="Finance Operations Demo", layout="wide")

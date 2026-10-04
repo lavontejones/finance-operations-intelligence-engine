@@ -1,4 +1,5 @@
 from datetime import date
+
 from foie.controls import confidence_action, find_duplicates, reconcile
 from foie.models import Transaction
 

@@ -1,5 +1,6 @@
 """Deterministic control rules. Output is proposed work, never a ledger posting."""
 from collections import defaultdict
+
 from .models import ReviewItem, Transaction
 
 

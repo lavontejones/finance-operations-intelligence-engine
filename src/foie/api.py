@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+
 from .pipeline import build_demo
 
 app = FastAPI(title="Finance Operations Intelligence Engine", version="0.1.0")
