@@ -1,0 +1,3 @@
+expense_id,vendor,frequency,next_due,amount,expense_account,source
+REC-001,Equipment Lease Co,monthly,2026-05-01,18000,Equipment Lease,synthetic-ap-export
+REC-002,Insurance Example LLC,monthly,2026-05-01,9500,Insurance,synthetic-ap-export

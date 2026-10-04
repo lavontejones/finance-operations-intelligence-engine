@@ -1,0 +1,10 @@
+transaction_id,posted_on,source,description,amount,account,reference
+B001,2026-04-01,bank,Customer payment - Apex School,250000,Operating Cash,AR-1001
+B002,2026-04-02,bank,Steel purchase - Midwest Steel,-88000,Materials,PO-4401
+B003,2026-04-03,bank,Payroll ACH,-205000,Payroll,PAY-APR1
+B004,2026-04-04,bank,Fuel card settlement,-23000,Vehicle and Fuel,FUEL-04
+B005,2026-04-04,bank,Fuel card settlement,-23000,Vehicle and Fuel,FUEL-04
+B006,2026-04-10,bank,Equipment purchase - CNC line,-350000,Capex,CAPEX-77
+B007,2026-04-15,bank,Loan payment,-48000,Debt Service,LOAN-12
+B008,2026-04-20,bank,Internal transfer Project Delivery to Fabrication,-125000,Internal Allocation,ALLOC-01
+B009,2026-04-22,bank,Equipment repair - CNC line,-40000,Capex,CAPEX-78

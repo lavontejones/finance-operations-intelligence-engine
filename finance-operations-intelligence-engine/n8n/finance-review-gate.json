@@ -1,0 +1,11 @@
+{
+  "name": "Synthetic Finance Review Gate (Non-Live)",
+  "nodes": [
+    {"parameters": {}, "id": "1", "name": "Manual synthetic trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [300, 300]},
+    {"parameters": {"jsCode": "return [{json: {message: 'Import synthetic exception data here. Human review is required before any downstream action.', live_write: false}}];"}, "id": "2", "name": "Create review work item", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [520, 300]},
+    {"parameters": {}, "id": "3", "name": "Human approval gate", "type": "n8n-nodes-base.wait", "typeVersion": 1.1, "position": [740, 300]}
+  ],
+  "connections": {"Manual synthetic trigger": {"main": [[{"node": "Create review work item", "type": "main", "index": 0}]]}, "Create review work item": {"main": [[{"node": "Human approval gate", "type": "main", "index": 0}]]}},
+  "active": false,
+  "settings": {"executionOrder": "v1"}
+}

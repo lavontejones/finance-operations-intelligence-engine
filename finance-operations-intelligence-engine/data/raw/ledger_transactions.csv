@@ -1,0 +1,5 @@
+transaction_id,posted_on,source,description,amount,account,reference
+L001,2026-04-01,ledger,Customer payment - Apex School,250000,Accounts Receivable,AR-1001
+L002,2026-04-02,ledger,Steel purchase - Midwest Steel,-88000,Materials,PO-4401
+L003,2026-04-03,ledger,Payroll ACH,-205000,Payroll,PAY-APR1
+L004,2026-04-15,ledger,Loan payment,-48000,Debt Service,LOAN-12

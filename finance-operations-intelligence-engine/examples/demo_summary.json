@@ -1,0 +1,400 @@
+{
+  "company": "Northstar Build & Fabrication LLC (fictional)",
+  "source_inventory": {
+    "bank_transactions": 9,
+    "ledger_transactions": 4,
+    "invoices": 3,
+    "payroll": 1,
+    "recurring_expenses": 2
+  },
+  "reconciliation": {
+    "bank_records": 9,
+    "ledger_records": 4,
+    "unmatched_bank_records": [
+      "B004",
+      "B005",
+      "B006",
+      "B008",
+      "B009"
+    ],
+    "matched": 4
+  },
+  "classification_results": [
+    {
+      "transaction_id": "B001",
+      "category": "Accounts Receivable",
+      "confidence": 0.98
+    },
+    {
+      "transaction_id": "B002",
+      "category": "Materials",
+      "confidence": 0.96
+    },
+    {
+      "transaction_id": "B003",
+      "category": "Payroll",
+      "confidence": 0.99
+    },
+    {
+      "transaction_id": "B004",
+      "category": "Vehicle and Fuel",
+      "confidence": 0.94
+    },
+    {
+      "transaction_id": "B005",
+      "category": "Vehicle and Fuel",
+      "confidence": 0.94
+    },
+    {
+      "transaction_id": "B006",
+      "category": "Unclassified",
+      "confidence": 0.3
+    },
+    {
+      "transaction_id": "B007",
+      "category": "Debt Service",
+      "confidence": 0.97
+    },
+    {
+      "transaction_id": "B008",
+      "category": "Internal Allocation",
+      "confidence": 0.72
+    },
+    {
+      "transaction_id": "B009",
+      "category": "Unclassified",
+      "confidence": 0.3
+    },
+    {
+      "transaction_id": "B005",
+      "category": "Matches B004 on date, amount, and reference",
+      "confidence": 0.98,
+      "review_status": "human_review"
+    },
+    {
+      "transaction_id": "B006",
+      "category": "Amount exceeds 2.5 times the account average",
+      "confidence": 0.55,
+      "review_status": "investigate"
+    }
+  ],
+  "approval_queue": [
+    {
+      "review_id": "dup-B005",
+      "transaction_id": "B005",
+      "reason": "Matches B004 on date, amount, and reference",
+      "confidence": 0.98,
+      "status": "human_review",
+      "source_record": "bank"
+    },
+    {
+      "review_id": "anomaly-B006",
+      "transaction_id": "B006",
+      "reason": "Amount exceeds 2.5 times the account average",
+      "confidence": 0.55,
+      "status": "investigate",
+      "source_record": "bank"
+    }
+  ],
+  "ar_aging": {
+    "current": 0.0,
+    "1_30": 250000.0,
+    "31_60": 180000.0,
+    "61_90": 0.0,
+    "over_90": 75000.0
+  },
+  "cash_forecast": [
+    {
+      "week": 1,
+      "week_of": "2026-01-05",
+      "inflows": 480000,
+      "outflows": 430000,
+      "ending_cash": 1300000
+    },
+    {
+      "week": 2,
+      "week_of": "2026-01-12",
+      "inflows": 480000,
+      "outflows": 440000,
+      "ending_cash": 1340000
+    },
+    {
+      "week": 3,
+      "week_of": "2026-01-19",
+      "inflows": 480000,
+      "outflows": 445000,
+      "ending_cash": 1375000
+    },
+    {
+      "week": 4,
+      "week_of": "2026-01-26",
+      "inflows": 480000,
+      "outflows": 450000,
+      "ending_cash": 1405000
+    },
+    {
+      "week": 5,
+      "week_of": "2026-02-02",
+      "inflows": 480000,
+      "outflows": 460000,
+      "ending_cash": 1425000
+    },
+    {
+      "week": 6,
+      "week_of": "2026-02-09",
+      "inflows": 480000,
+      "outflows": 455000,
+      "ending_cash": 1450000
+    },
+    {
+      "week": 7,
+      "week_of": "2026-02-16",
+      "inflows": 480000,
+      "outflows": 465000,
+      "ending_cash": 1465000
+    },
+    {
+      "week": 8,
+      "week_of": "2026-02-23",
+      "inflows": 480000,
+      "outflows": 470000,
+      "ending_cash": 1475000
+    },
+    {
+      "week": 9,
+      "week_of": "2026-03-02",
+      "inflows": 480000,
+      "outflows": 460000,
+      "ending_cash": 1495000
+    },
+    {
+      "week": 10,
+      "week_of": "2026-03-09",
+      "inflows": 480000,
+      "outflows": 475000,
+      "ending_cash": 1500000
+    },
+    {
+      "week": 11,
+      "week_of": "2026-03-16",
+      "inflows": 480000,
+      "outflows": 480000,
+      "ending_cash": 1500000
+    },
+    {
+      "week": 12,
+      "week_of": "2026-03-23",
+      "inflows": 480000,
+      "outflows": 470000,
+      "ending_cash": 1510000
+    },
+    {
+      "week": 13,
+      "week_of": "2026-03-30",
+      "inflows": 480000,
+      "outflows": 490000,
+      "ending_cash": 1500000
+    }
+  ],
+  "rolling_forecast": [
+    {
+      "month": 1,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 2,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 3,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 4,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 5,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 6,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 7,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 8,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 9,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 10,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 11,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    },
+    {
+      "month": 12,
+      "revenue": 2100000,
+      "operating_cost": 1760000,
+      "ebitda": 340000
+    }
+  ],
+  "budget_variance": [
+    {
+      "account": "Materials",
+      "actual": 680000,
+      "budget": 650000,
+      "variance": 30000
+    },
+    {
+      "account": "Payroll",
+      "actual": 430000,
+      "budget": 440000,
+      "variance": -10000
+    },
+    {
+      "account": "Vehicle and Fuel",
+      "actual": 64000,
+      "budget": 60000,
+      "variance": 4000
+    }
+  ],
+  "kpis": {
+    "gross_margin_pct": 16.2,
+    "days_sales_outstanding": 87.8,
+    "cash_ratio": 1.53
+  },
+  "audit_trail": [
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B001",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B002",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B003",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B004",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B005",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B006",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B007",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B008",
+      "lineage": "bank"
+    },
+    {
+      "event_id": "audit-001",
+      "occurred_on": "2026-04-30T09:00:00Z",
+      "actor": "demo.pipeline",
+      "action": "ingested",
+      "object_id": "B009",
+      "lineage": "bank"
+    }
+  ],
+  "management_package": {
+    "title": "Northstar Build & Fabrication | Synthetic CFO Package",
+    "kpis": {
+      "gross_margin_pct": 16.2,
+      "days_sales_outstanding": 87.8,
+      "cash_ratio": 1.53
+    },
+    "week_13_cash": 1500000,
+    "open_control_items": 2,
+    "note": "Illustrative information only. Not a financial statement."
+  },
+  "close_checklist": [
+    {
+      "task": "Reconcile bank and card accounts",
+      "owner": "Controller",
+      "status": "in_progress"
+    },
+    {
+      "task": "Review AR aging",
+      "owner": "AR Lead",
+      "status": "open"
+    },
+    {
+      "task": "Review capex and debt schedules",
+      "owner": "FP&A",
+      "status": "open"
+    }
+  ]
+}

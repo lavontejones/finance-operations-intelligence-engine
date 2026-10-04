@@ -1,0 +1,2 @@
+payrun_id,pay_date,gross_pay,employer_tax,benefits,headcount,source
+PAY-APR1,2026-04-03,170000,21000,14000,100,synthetic-payroll-export

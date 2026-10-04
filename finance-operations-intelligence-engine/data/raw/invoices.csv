@@ -1,0 +1,4 @@
+invoice_id,customer,issue_date,due_date,open_amount
+INV-1001,Apex School District,2026-03-01,2026-03-31,250000
+INV-1002,Riverbend Development,2026-02-01,2026-03-02,180000
+INV-1003,Westfield Plant,2025-12-01,2025-12-31,75000
