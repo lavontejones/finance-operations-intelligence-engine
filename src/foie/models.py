@@ -1,5 +1,8 @@
 from dataclasses import asdict, dataclass
 from datetime import date
+from decimal import Decimal
+
+from .money import money
 
 
 @dataclass(frozen=True)
@@ -8,9 +11,14 @@ class Transaction:
     posted_on: date
     source: str
     description: str
-    amount: float
+    amount: Decimal
     account: str
     reference: str = ""
+
+    def __post_init__(self):
+        if not self.transaction_id.strip() or not self.account.strip():
+            raise ValueError("Transaction ID and account required")
+        object.__setattr__(self, "amount", money(self.amount))
 
 
 @dataclass(frozen=True)
@@ -37,3 +45,4 @@ class AuditEvent:
 
     def as_dict(self):
         return asdict(self)
+

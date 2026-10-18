@@ -11,6 +11,7 @@ dependencies = ["fastapi>=0.110", "uvicorn>=0.27"]
 
 [project.optional-dependencies]
 dashboard = ["streamlit>=1.32"]
+documents = ["pypdf==6.21.1"]
 dev = ["pytest>=8.0", "ruff>=0.4"]
 
 [tool.pytest.ini_options]
@@ -19,3 +20,4 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
+

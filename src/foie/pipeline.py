@@ -5,6 +5,7 @@ from pathlib import Path
 from .controls import categorize, find_anomalies, find_duplicates, reconcile
 from .forecasting import ar_aging, rolling_twelve_month, thirteen_week_cash
 from .models import AuditEvent, Transaction
+from .money import money
 from .reporting import budget_variance, kpis, management_package
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -13,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def read_transactions(filename: str) -> list[Transaction]:
     with (ROOT / "data" / "raw" / filename).open(newline="") as handle:
         return [Transaction(row["transaction_id"], date.fromisoformat(row["posted_on"]), row["source"],
-                row["description"], float(row["amount"]), row["account"], row["reference"])
+                row["description"], money(row["amount"]), row["account"], row["reference"])
                 for row in csv.DictReader(handle)]
 
 
@@ -52,3 +53,4 @@ def build_demo() -> dict:
             "budget_variance": variance, "kpis": metric, "audit_trail": audit,
             "management_package": management_package(metric, cash, [x.as_dict() for x in reviews]),
             "close_checklist": [{"task": "Reconcile bank and card accounts", "owner": "Controller", "status": "in_progress"}, {"task": "Review AR aging", "owner": "AR Lead", "status": "open"}, {"task": "Review capex and debt schedules", "owner": "FP&A", "status": "open"}]}
+
